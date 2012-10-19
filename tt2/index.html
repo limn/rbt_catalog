@@ -1,0 +1,51 @@
+<!doctype html>
+
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <title>RBT Megafon - TRUE content catalog</title>
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/themes/base/jquery-ui.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
+
+    <style>
+      body {
+        font-family: "Trebuchet MS", "Helvetica", "Arial",  "Verdana", "sans-serif";
+        font-size: 80%;
+      }
+      .ui-autocomplete-loading {
+        background: white url('/rbt_megafon/img/ui-anim_basic_16x16.gif') right center no-repeat;
+      }
+      #city { width: 25em; }
+    </style>
+    <script>[%INCLUDE index.js%]</script>
+</head>
+<body>
+
+  <p><table width="90%" align="center"><tr><td>
+          <div class="ui-widget">
+            <label for="city">Найти трек в правильной базе РБТ: </label>
+            <input id="city" />
+            ( content_id, название, исполнитель )
+          </div>
+  </td></tr></table></p>
+
+  <p><table width="90%" align="center" border="1" cellpadding="2">
+      <thead>
+        <tr>
+          <th rowspan="2">content_id</th><th rowspan="2">Название</th><th rowspan="2">Исполнитель</th><th rowspan="2">Права</th>
+          <th colspan="8">Порты на платформы Мегафона</th><th rowspan="2">СуперХИТ</th><th rowspan="2">Партнерская программа</th>
+          <th colspan="2">Продажи за месяц</th>
+        </tr>
+        <tr>
+          <th>Северный-Кавказ</th><th>Москва</th><th>Поволжье</th><th>Дальний-Восток</th><th>Сибирь</th><th>Питер</th><th>Урал</th><th>Центр</th>
+          <th>Кол-во</th><th>Сумм, руб</th>
+        </tr>
+      </thead>
+      <tbody id="placeHere">
+      </tbody>
+  </table></p>
+
+</body>
+</html>
