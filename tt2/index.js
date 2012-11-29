@@ -5,7 +5,7 @@ $( function() {
 
         var tr = $('<tr>'); 
         $.map( 
-            ['content_id', 'song_name', 'song_performer_name', 'ready', 'pl_1', 'pl_6', 'pl_7', 'pl_8', 'pl_9', 'pl_2', 'pl_4', 'pl_5', 'superhit', 'partner', 'sale_count', 'sale_sum' ], 
+            ['content_id', 'song_name', 'song_performer_name', 'ready', 'pl_1', 'pl_6', 'pl_7', 'pl_8', 'pl_9', 'pl_2', 'pl_4', 'pl_5', 'superhit', 'partner', 'price', 'sale_count', 'sale_sum' ], 
             function ( i ) {
                 tr.append( $('<td>').text( item[ i ] ) );
             } );

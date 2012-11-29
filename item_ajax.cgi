@@ -48,6 +48,7 @@ sub makeOUT {
         push @{ $perform{$h->{singername}} }, $h->{platform_id};
 
             }, q{SELECT * FROM rbt_megafon.tones WHERE content_id=?}, $id );
+    $res->{price} = join( ',', keys %prices );
     $res->{comment} .= sprintf "<p>Ошибка в ценах: %s</p>", join( ',', keys %prices )  if scalar keys %prices > 1;
     $res->{comment} .= sprintf "<p>Ошибка в названии песни: '%s'</p>", join( "','", keys %names )  if scalar keys %names > 1;
     $res->{comment} .= sprintf "<p>Ошибка в исполнителе: '%s'</p>", join( "','", keys %perform )  if scalar keys %perform > 1;
